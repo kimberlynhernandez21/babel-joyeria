@@ -2,6 +2,7 @@ import { Header } from '@/components/header'
 import { Hero } from '@/components/hero'
 import { Products } from '@/components/products'
 import { WhyUs } from '@/components/why-us'
+import { CraftArt } from '@/components/craft-art'
 import { Footer } from '@/components/footer'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 
@@ -13,6 +14,7 @@ export default function HomePage() {
         <Hero />
         <Products />
         <WhyUs />
+        <CraftArt />
       </main>
       <Footer />
       <WhatsAppButton />

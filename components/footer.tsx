@@ -9,7 +9,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block">
-              <span className="text-3xl font-serif font-semibold text-white">
+              <span className="text-3xl font-serif font-semibold tracking-[0.2em] text-primary uppercase">
                 Babel
               </span>
             </Link>

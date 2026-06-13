@@ -6,81 +6,88 @@ import { useState } from 'react'
 const products = [
   {
     id: 1,
-    name: 'Anillo Solitario Oro 18k',
-    description: 'Diseño clásico con diamante central',
+    name: 'Anillos de Compromiso en Oro Rosa',
+    description: 'Cálido oro rosa de 18k con diamante central de talla brillante.',
     price: 'Q 8,500',
-    image: '/images/ring-gold-1.png',
-    category: 'oro',
+    image: '/images/oro-rosa.png',
+    category: 'oro-rosa',
+    tag: 'Oro Rosa',
   },
   {
     id: 2,
-    name: 'Anillo Elegancia Plata',
-    description: 'Plata 925 con circonita brillante',
-    price: 'Q 2,800',
-    image: '/images/ring-silver-1.png',
-    category: 'plata',
+    name: 'Anillos en Oro Amarillo',
+    description: 'El clásico atemporal en oro amarillo de 18k con solitario.',
+    price: 'Q 7,900',
+    image: '/images/oro-amarillo.png',
+    category: 'oro-amarillo',
+    tag: 'Oro Amarillo',
   },
   {
     id: 3,
-    name: 'Set Parejas Oro',
-    description: 'Dos anillos oro 14k complementarios',
-    price: 'Q 12,500',
-    image: '/images/set-gold.png',
-    category: 'sets',
+    name: 'Churumbelas en Oro Blanco',
+    description: 'Banda de eternidad en oro blanco engastada con diamantes.',
+    price: 'Q 11,200',
+    image: '/images/oro-blanco.png',
+    category: 'oro-blanco',
+    tag: 'Oro Blanco',
   },
   {
     id: 4,
-    name: 'Set Parejas Plata',
-    description: 'Dos anillos plata 925 grabables',
-    price: 'Q 4,200',
-    image: '/images/set-silver.png',
-    category: 'sets',
+    name: 'Argollas de Matrimonio Grabadas',
+    description: 'Par de argollas pulidas con grabado personalizado incluido.',
+    price: 'Q 9,600',
+    image: '/images/argollas.png',
+    category: 'argollas',
+    tag: 'Argollas',
   },
   {
     id: 5,
-    name: 'Anillo Promesa Oro',
-    description: 'Oro 14k con diseño moderno',
-    price: 'Q 6,200',
-    image: '/images/ring-gold-2.png',
-    category: 'oro',
+    name: 'Anillos de Compromiso en Oro Rosa',
+    description: 'Diseño moderno en oro rosa con halo de diamantes.',
+    price: 'Q 12,500',
+    image: '/images/oro-rosa.png',
+    category: 'oro-rosa',
+    tag: 'Oro Rosa',
   },
   {
     id: 6,
-    name: 'Anillo Eterno Oro 18k',
-    description: 'Banda de oro con diamantes',
-    price: 'Q 15,000',
-    image: '/images/hero-ring.png',
-    category: 'oro',
+    name: 'Argollas de Matrimonio Grabadas',
+    description: 'Acabado mate y pulido con fecha grabada a mano.',
+    price: 'Q 10,400',
+    image: '/images/argollas.png',
+    category: 'argollas',
+    tag: 'Argollas',
   },
 ]
 
 const categories = [
   { id: 'todos', label: 'Todos' },
-  { id: 'oro', label: 'Oro' },
-  { id: 'plata', label: 'Plata' },
-  { id: 'sets', label: 'Sets' },
+  { id: 'oro-rosa', label: 'Oro Rosa' },
+  { id: 'oro-amarillo', label: 'Oro Amarillo' },
+  { id: 'oro-blanco', label: 'Oro Blanco' },
+  { id: 'argollas', label: 'Argollas' },
 ]
 
 export function Products() {
   const [activeCategory, setActiveCategory] = useState('todos')
 
-  const filteredProducts = activeCategory === 'todos' 
-    ? products 
+  const filteredProducts = activeCategory === 'todos'
+    ? products
     : products.filter(p => p.category === activeCategory)
 
   return (
-    <section id="productos" className="py-20 lg:py-32 bg-secondary/50">
+    <section id="productos" className="py-20 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-4">
+          <p className="text-primary font-medium tracking-[0.3em] uppercase text-xs sm:text-sm mb-4">
             Nuestra Colección
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-foreground text-balance">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium text-foreground text-balance">
             Productos Destacados
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Cada pieza es elaborada con los mejores materiales y la dedicación artesanal 
+            Cada pieza es elaborada con los mejores materiales y la dedicación artesanal
             que caracteriza a Babel.
           </p>
         </div>
@@ -91,10 +98,10 @@ export function Products() {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
+              className={`px-6 py-2.5 rounded-full text-sm font-medium tracking-wide transition-all ${
                 activeCategory === category.id
                   ? 'bg-primary text-primary-foreground'
-                  : 'bg-card text-muted-foreground hover:text-foreground border border-border hover:border-primary'
+                  : 'bg-card text-muted-foreground hover:text-foreground border border-border hover:border-primary/60'
               }`}
             >
               {category.label}
@@ -107,10 +114,10 @@ export function Products() {
           {filteredProducts.map((product) => (
             <article
               key={product.id}
-              className="group bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-xl"
+              className="group bg-card rounded-2xl overflow-hidden border border-primary/20 hover:border-primary/60 transition-all hover:shadow-xl hover:shadow-primary/10"
             >
               {/* Product Image */}
-              <div className="relative aspect-square bg-secondary/30 overflow-hidden">
+              <div className="relative aspect-square bg-secondary overflow-hidden">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -118,21 +125,21 @@ export function Products() {
                   className="object-contain p-8 group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full uppercase">
-                    {product.category}
+                  <span className="px-3 py-1 bg-primary/15 text-primary text-xs font-medium rounded-full uppercase tracking-wide border border-primary/30">
+                    {product.tag}
                   </span>
                 </div>
               </div>
 
               {/* Product Info */}
               <div className="p-6">
-                <h3 className="text-lg font-serif font-semibold text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-serif font-medium text-foreground group-hover:text-primary transition-colors text-balance">
                   {product.name}
                 </h3>
-                <p className="mt-1 text-sm text-muted-foreground">
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                   {product.description}
                 </p>
-                <div className="mt-4 flex items-center justify-between">
+                <div className="mt-5 flex items-center justify-between">
                   <span className="text-xl font-semibold text-primary">
                     {product.price}
                   </span>
@@ -140,7 +147,7 @@ export function Products() {
                     href={`https://wa.me/50212345678?text=Hola%2C%20me%20interesa%20el%20${encodeURIComponent(product.name)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-full hover:bg-gold-dark transition-colors"
+                    className="px-4 py-2 border border-primary text-primary text-sm font-medium rounded-full hover:bg-primary hover:text-primary-foreground transition-colors"
                   >
                     Consultar
                   </a>
@@ -159,7 +166,7 @@ export function Products() {
             className="inline-flex items-center gap-2 text-primary font-medium hover:text-gold-dark transition-colors"
           >
             Ver catálogo completo
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
