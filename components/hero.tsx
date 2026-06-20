@@ -20,7 +20,7 @@ export function Hero() {
               <div className="absolute inset-0 border border-primary/20 rounded-full scale-90" />
               <div className="absolute inset-0 border border-primary/10 rounded-full scale-100" />
               <div className="relative z-10 flex items-center justify-center h-full">
-                <Image src="/anillo-de-héroe.webp" alt="Anillo de compromiso Babel" width={500} height={500} className="object-contain drop-shadow-[0_20px_50px_rgba(201,168,76,0.25)]" priority />
+                <Image src="/hero-ring.webp" alt="Anillo de compromiso Babel" width={500} height={500} className="object-contain drop-shadow-[0_20px_50px_rgba(201,168,76,0.25)]" priority />
               </div>
             </div>
             <div className="absolute top-10 left-0 bg-card/80 backdrop-blur-sm px-4 py-2 border rounded-full"><span className="text-sm font-medium text-primary">Oro 18k</span></div>
