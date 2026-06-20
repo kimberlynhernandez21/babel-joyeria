@@ -35,28 +35,30 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <Link
-              href="#productos"
+              href="/anillos-de-compromiso"
               className="text-sm font-medium tracking-wide text-foreground/70 hover:text-primary transition-colors"
             >
               Productos
             </Link>
             <Link
-              href="#nosotros"
+              href="/nosotros"
               className="text-sm font-medium tracking-wide text-foreground/70 hover:text-primary transition-colors"
             >
               Nosotros
             </Link>
-            <Link
-              href="#contacto"
+            
+              href="https://wa.me/50212345678?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20sus%20joyas"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm font-medium tracking-wide text-foreground/70 hover:text-primary transition-colors"
             >
               Contacto
-            </Link>
+            </a>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a
+            
               href="https://wa.me/50212345678?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20sus%20joyas"
               target="_blank"
               rel="noopener noreferrer"
@@ -81,27 +83,28 @@ export function Header() {
           <nav className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md">
             <div className="flex flex-col gap-4">
               <Link
-                href="#productos"
+                href="/anillos-de-compromiso"
                 onClick={() => setIsMenuOpen(false)}
                 className="text-base font-medium text-foreground/70 hover:text-primary transition-colors"
               >
                 Productos
               </Link>
               <Link
-                href="#nosotros"
+                href="/nosotros"
                 onClick={() => setIsMenuOpen(false)}
                 className="text-base font-medium text-foreground/70 hover:text-primary transition-colors"
               >
                 Nosotros
               </Link>
-              <Link
-                href="#contacto"
-                onClick={() => setIsMenuOpen(false)}
+              
+                href="https://wa.me/50212345678?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20sus%20joyas"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-base font-medium text-foreground/70 hover:text-primary transition-colors"
               >
                 Contacto
-              </Link>
-              <a
+              </a>
+              
                 href="https://wa.me/50212345678?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20sus%20joyas"
                 target="_blank"
                 rel="noopener noreferrer"
