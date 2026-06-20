@@ -1,0 +1,257 @@
+import Image from 'next/image'
+
+export function Hero() {
+  return (
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
+      {/* Sutil radial glow behind ring */}
+      <div className="absolute top-1/2 right-0 lg:right-1/4 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/5 blur-3xl" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+          {/* Text content */}
+          <div className="text-center lg:text-left order-2 lg:order-1">
+            <p className="text-primary font-medium tracking-[0.3em] uppercase text-xs sm:text-sm mb-6">
+              Joyería de Compromiso
+            </p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium text-foreground">
+              Joyas que hablan por ti
+            </h1>
+            <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Descubre nuestra colección exclusiva de anillos y conjuntos de compromiso en oro y plata,
+              Diseñado para parejas guatemaltecas que buscan lo mejor.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a
+                href="#productos"
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full hover:bg-primary/90 transition-colors"
+              >
+                Ver Colección
+              </a>
+              <a
+                href="https://wa.me/50212345678?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20sus%20joyas"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 border border-primary/50 text-primary font-medium rounded-full hover:bg-primary/10 transition-colors"
+              >
+                Contáctanos
+              </a>
+            </div>
+          </div>
+
+          {/* Main image */}
+          <div className="order relative-1 lg:order-2">
+            <div className="aspect-square relative max-w-lg mx-auto">
+              {/* Decorative rings */}
+              <div className="absolute inset-0 border border-primary/20 rounded-full scale-90" />
+              <div className="absolute inset-0 border border-primary/10 rounded-full scale-100" />
+
+              {/* Main image */}
+              <div className="relative z-10 flex items-center justify-center h-full">
+                <Image
+                  src="/anillo-de-héroe.webp"
+                  alt="Anillo de compromiso Babel"
+                  width={500}
+                  height={500}
+                  className="object-contain drop-shadow-[0_20px_50px_rgba(201,168,76,0.25)]"
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* Floating badges */}
+            <div className="absolute top-10 left-0 bg-card/80 backdrop-blur-sm px-4 py-2 border rounded-full">
+              <span className="text-sm font-medium text-primary">Oro 18k</span>
+            </div>
+            <div className="absolute bottom-20 right-0 bg-card/80 fondo-desenfoque-sm px-4 py-2 border rounded-full">
+              <span className="text-sm font-medium text-primary">Garantía de por vida</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -transmitir-x-1/2 oculto lg:flex flex-col items-center gap-2">
+          <span className="text-xs tracking-[0.3em] uppercase">Descubre más</span>
+          <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent" />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+'use client'
+
+import Image from 'next/image'
+import { useState } from 'react'
+
+const productos = [
+  {
+    id: 1,
+    nombre: 'Anillos de Compromiso en Oro Rosa',
+    descripcion: 'Cálido oro rosa de 18k con diamante central de talla brillante.',
+    precio: 'Q 8,500',
+    imagen: '/oro-rosa.webp',
+    categoria: 'oro-rosa',
+    etiqueta: 'Oro Rosa',
+  },
+  {
+    id: 2,
+    nombre: 'Anillos en Oro Amarillo',
+    descripcion: 'El clásico atemporal en oro amarillo de 18k con solitario.',
+    precio: 'Q 7,900',
+    imagen: '/oro-amarillo.webp',
+    categoria: 'oro-amarillo',
+    etiqueta: 'Oro Amarillo',
+  },
+  {
+    id: 3,
+    nombre: 'Churumbelas en Oro Blanco',
+    descripcion: 'Banda de eternidad en oro blanco engastada con diamantes.',
+    precio: 'Q 11,200',
+    imagen: '/oro-blanco.webp',
+    categoria: 'oro-blanco',
+    etiqueta: 'Oro Blanco',
+  },
+  {
+    id: 4,
+    nombre: 'Argollas de Matrimonio Grabadas',
+    descripcion: 'Par de argollas pulidas con grabado personalizado incluido.',
+    precio: 'Q 9,600',
+    imagen: '/argolas.webp',
+    categoria: 'argollas',
+    etiqueta: 'Argollas',
+  },
+  {
+    id: 5,
+    nombre: 'Anillos de Compromiso en Oro Rosa',
+    descripcion: 'Diseño moderno en oro rosa con halo de diamantes.',
+    precio: 'Q 12,500',
+    imagen: '/oro-rosa.webp',
+    categoria: 'oro-rosa',
+    etiqueta: 'Oro Rosa',
+  },
+  {
+    id: 6,
+    nombre: 'Argollas de Matrimonio Grabadas',
+    descripcion: 'Acabado mate y pulido con fecha grabada a mano.',
+    precio: 'Q 10,400',
+    imagen: '/argolas.webp',
+    categoria: 'argollas',
+    etiqueta: 'Argollas',
+  },
+]
+
+const categorias = [
+  { id: 'tareas', etiqueta: 'Todos' },
+  { id: 'oro-rosa', etiqueta: 'Oro Rosa' },
+  { id: 'oro-amarillo', etiqueta: 'Oro Amarillo' },
+  { id: 'oro-blanco', etiqueta: 'Oro Blanco' },
+  { id: 'argollas', etiqueta: 'Argollas' },
+]
+
+export function Productos() {
+  const [categoriaActiva, setCategoriaActiva] = useState('tareas')
+
+  const productosFiltrados = categoriaActiva === 'tareas'
+    ? productos
+    : productos.filter(p => p.categoria === categoriaActiva)
+
+  return (
+    <section id="productos" className="py-20 lg:py-32 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Encabezado de sección */}
+        <div className="text-center mb-12">
+          <p className="text-primary font-medium tracking-[0.3em] uppercase text-xs sm:text-sm mb-4">
+            Nuestra Colección
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium text-foreground text-balance">
+            Productos Destacados
+          </h2>
+          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Cada pieza es elaborada con los mejores materiales y la dedicación artesanal
+            que caracteriza a Babel.
+          </p>
+        </div>
+
+        {/* Filtro de categoría */}
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
+          {categorias.map((categoria) => (
+            <button
+              key={categoria.id}
+              onClick={() => setCategoriaActiva(categoria.id)}
+              className={`px-6 py-2.5 rounded-full text-sm font-medium tracking-wide transition-all${
+                categoriaActiva === categoria.id
+                  ? ' bg-primary text-primary-foreground'
+                  : ' bg-card text-muted-foreground hover:text-foreground border border-border hover:border-primary/60'
+              }`}
+            >
+              {categoria.etiqueta}
+            </button>
+          ))}
+        </div>
+
+        {/* Cuadrícula de productos */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {productosFiltrados.map((producto) => (
+            <article
+              key={producto.id}
+              className="group bg-card rounded-2xl overflow-hidden border border-primary/20 hover:border-primary/60 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
+            >
+              {/* Imagen del producto */}
+              <div className="aspect-square relative bg-secondary overflow-hidden">
+                <Image
+                  src={producto.imagen}
+                  alt={producto.nombre}
+                  fill
+                  className="object-contain p-8 group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-4 left-4">
+                  <span className="px-3 py-1 bg-primary/15 text-primary text-xs font-medium rounded-full uppercase">
+                    {producto.etiqueta}
+                  </span>
+                </div>
+              </div>
+
+              {/* Información del producto */}
+              <div className="p-6">
+                <h3 className="text-lg font-serif font-medium text-foreground group-hover:text-primary transition-colors">
+                  {producto.nombre}
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  {producto.descripcion}
+                </p>
+                <div className="mt-5 flex items-center justify-between">
+                  <span className="text-xl font-semibold text-primary">
+                    {producto.precio}
+                  </span>
+                  <a
+                    href={`https://wa.me/50212345678?text=Hola%2C%20me%20interesa%20el%20${encodeURIComponent(producto.nombre)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 border border-primary text-primary text-sm font-medium rounded-full hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    Consultar
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* Ver todos los CTA */}
+        <div className="mt-12 text-center">
+          <a
+            href="https://wa.me/50212345678?text=Hola%2C%20me%20gustaría%20ver%20todo%20el%20catálogo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-primary font-medium hover:text-gold-dark transition-colors"
+          >
+            Ver catálogo completo
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}
