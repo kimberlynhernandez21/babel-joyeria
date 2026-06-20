@@ -10,7 +10,7 @@ const productos = [
   { id: 4, nombre: 'Argollas de Matrimonio Grabadas', descripcion: 'Par de argollas pulidas con grabado personalizado incluido.', precio: 'Q 9,600', imagen: '/argollas.webp', categoria: 'argollas', etiqueta: 'Argollas' },
   { id: 5, nombre: 'Anillos de Compromiso en Oro Rosa', descripcion: 'Diseño moderno en oro rosa con halo de diamantes.', precio: 'Q 12,500', imagen: '/oro-rosa.webp', categoria: 'oro-rosa', etiqueta: 'Oro Rosa' },
   { id: 6, nombre: 'Argollas de Matrimonio Grabadas', descripcion: 'Acabado mate y pulido con fecha grabada a mano.', precio: 'Q 10,400', imagen: '/argollas.webp', categoria: 'argollas', etiqueta: 'Argollas' },
-]l
+]
 
 const categorias = [
   { id: 'tareas', etiqueta: 'Todos' },
