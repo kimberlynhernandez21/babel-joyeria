@@ -7,7 +7,7 @@ const productos = [
   { id: 1, nombre: 'Anillos de Compromiso en Oro Rosa', descripcion: 'Cálido oro rosa de 18k con diamante central de talla brillante.', precio: 'Q 8,500', imagen: '/oro-rosa.webp', categoria: 'oro-rosa', etiqueta: 'Oro Rosa' },
   { id: 2, nombre: 'Anillos en Oro Amarillo', descripcion: 'El clásico atemporal en oro amarillo de 18k con solitario.', precio: 'Q 7,900', imagen: '/oro-amarillo.webp', categoria: 'oro-amarillo', etiqueta: 'Oro Amarillo' },
   { id: 3, nombre: 'Churumbelas en Oro Blanco', descripcion: 'Banda de eternidad en oro blanco engastada con diamantes.', precio: 'Q 11,200', imagen: '/oro-blanco.webp', categoria: 'oro-blanco', etiqueta: 'Oro Blanco' },
-  { id: 4, nombre: 'Argollas de Matrimonio Grabadas', descripcion: 'Par de argollas pulidas con grabado personalizado incluido.', precio: 'Q 9,600', imagen: '/argolas.webp', categoria: 'argollas', etiqueta: 'Argollas' },
+  { id: 4, nombre: 'Argollas de Matrimonio Grabadas', descripcion: 'Par de argollas pulidas con grabado personalizado incluido.', precio: 'Q 9,600', imagen: '/argollas.webp', categoria: 'argollas', etiqueta: 'Argollas' },
   { id: 5, nombre: 'Anillos de Compromiso en Oro Rosa', descripcion: 'Diseño moderno en oro rosa con halo de diamantes.', precio: 'Q 12,500', imagen: '/oro-rosa.webp', categoria: 'oro-rosa', etiqueta: 'Oro Rosa' },
   { id: 6, nombre: 'Argollas de Matrimonio Grabadas', descripcion: 'Acabado mate y pulido con fecha grabada a mano.', precio: 'Q 10,400', imagen: '/argolas.webp', categoria: 'argollas', etiqueta: 'Argollas' },
 ]
