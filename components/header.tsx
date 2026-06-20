@@ -45,7 +45,7 @@ export function Header() {
               Nosotros
             </Link>
             
-              <a href="https://wa.me/50212345678?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20sus%20joyas"
+              href="https://wa.me/50212345678?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20sus%20joyas"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-medium tracking-wide text-foreground/70 hover:text-primary transition-colors"
